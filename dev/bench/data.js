@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1709802421315,
+  "lastUpdate": 1714631574971,
   "repoUrl": "https://github.com/AzureAD/microsoft-authentication-library-for-python",
   "entries": {
     "Benchmark": [
@@ -10867,6 +10867,2138 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000018333416713230087",
             "extra": "mean: 117.66644868779095 usec\nrounds: 4268"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "38140cfd48d042bdf2baf76c1b580ea123e987f3",
+          "message": "MSAL Python 1.28.0",
+          "timestamp": "2024-03-07T16:59:05-08:00",
+          "tree_id": "5b04792231d5a544d13ff71fce0aadc7222996f0",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/38140cfd48d042bdf2baf76c1b580ea123e987f3"
+        },
+        "date": 1709859691253,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 48792.15464631202,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001744379007539747",
+            "extra": "mean: 20.49509818225635 usec\nrounds: 8912"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 45800.34537056746,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001947294407883482",
+            "extra": "mean: 21.83389648940567 usec\nrounds: 16066"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8832.220199099054,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014459967879300297",
+            "extra": "mean: 113.2218148390375 usec\nrounds: 4461"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8574.483959896304,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013789522259448414",
+            "extra": "mean: 116.6250942537297 usec\nrounds: 4403"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "b530420c5a49ff0e3e3e6ba0f7218830bb29cff5",
+          "message": "broker-test.py shall test Azure CLI in MSA-PT mode",
+          "timestamp": "2024-03-11T08:51:49-07:00",
+          "tree_id": "f283207d0f71c3dd1242fab96faf04a500ca39ea",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/b530420c5a49ff0e3e3e6ba0f7218830bb29cff5"
+        },
+        "date": 1710172459631,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 48280.96482061813,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000015876303830889254",
+            "extra": "mean: 20.712096448680647 usec\nrounds: 8025"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 45733.14711925006,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002284924069286077",
+            "extra": "mean: 21.865978245330037 usec\nrounds: 19812"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8928.050448344211,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014674103600815",
+            "extra": "mean: 112.0065355573186 usec\nrounds: 4345"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8343.038808981688,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000020803167957321706",
+            "extra": "mean: 119.86040373244474 usec\nrounds: 4394"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ouko.sherman@gmail.com",
+            "name": "Sherman Ouko",
+            "username": "SHERMANOUKO"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c442c780c9777a6f746fed39539a9c42bbb5b0f6",
+          "message": "Rebrand from AAD to Microsoft Entra (#655)\n\n* Rebrand from AAD to Microsoft Entra\r\n* Readme rebranding",
+          "timestamp": "2024-03-11T11:36:54-07:00",
+          "tree_id": "05002d3c4b60b4a501a753f917e82fd199bb6828",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/c442c780c9777a6f746fed39539a9c42bbb5b0f6"
+        },
+        "date": 1710182376518,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47731.79702498684,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017572340634919583",
+            "extra": "mean: 20.9503949636867 usec\nrounds: 8816"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46499.19332219569,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002061346396114328",
+            "extra": "mean: 21.505749423886563 usec\nrounds: 16921"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8859.733997937501,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015099476293811495",
+            "extra": "mean: 112.87020583606628 usec\nrounds: 4421"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8609.887320435999,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013521355665658154",
+            "extra": "mean: 116.14553858637035 usec\nrounds: 4315"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "70e09fbccb54d793e11ae0d6c5d4749c7d0c1a16",
+          "message": "Implements a new optional oidc_authority parameter",
+          "timestamp": "2024-03-15T21:37:34-07:00",
+          "tree_id": "b234476fe57f4e2c6770bdad6dc7ac8c28f10408",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/70e09fbccb54d793e11ae0d6c5d4749c7d0c1a16"
+        },
+        "date": 1710564422821,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47436.49434460233,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001810897254004549",
+            "extra": "mean: 21.08081581103995 usec\nrounds: 8551"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44318.10696717348,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000005211554734896169",
+            "extra": "mean: 22.564140673713844 usec\nrounds: 16030"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8745.836689484515,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000016807941219907694",
+            "extra": "mean: 114.34011810469109 usec\nrounds: 4369"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8650.590102130598,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013958772428523891",
+            "extra": "mean: 115.59905026059492 usec\nrounds: 5372"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": false,
+          "id": "70e09fbccb54d793e11ae0d6c5d4749c7d0c1a16",
+          "message": "Implements a new optional oidc_authority parameter",
+          "timestamp": "2024-03-15T21:37:34-07:00",
+          "tree_id": "b234476fe57f4e2c6770bdad6dc7ac8c28f10408",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/70e09fbccb54d793e11ae0d6c5d4749c7d0c1a16"
+        },
+        "date": 1710564623671,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 48489.20138929098,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017334725181440384",
+            "extra": "mean: 20.62314848148548 usec\nrounds: 8991"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 41829.351169798676,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00000271617805609225",
+            "extra": "mean: 23.90665817264727 usec\nrounds: 14402"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8490.43598146869,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001875302063320831",
+            "extra": "mean: 117.77958189457054 usec\nrounds: 3822"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8287.45029745716,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014491039610272333",
+            "extra": "mean: 120.66437373468534 usec\nrounds: 4348"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "c3f84e90623887c565efb3b969d65bbc6fd3ea8a",
+          "message": "MSAL Python 1.28.0\n\nbroker-test.py shall test Azure CLI in MSA-PT mode",
+          "timestamp": "2024-03-15T21:55:40-07:00",
+          "tree_id": "6da784d8f76e90268f301a44b81545997e1df60f",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/c3f84e90623887c565efb3b969d65bbc6fd3ea8a"
+        },
+        "date": 1710565122503,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 49148.37913270409,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000014328327426137843",
+            "extra": "mean: 20.34655094728413 usec\nrounds: 12562"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47261.23658641921,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000015988299445549333",
+            "extra": "mean: 21.158989316148272 usec\nrounds: 16661"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8554.245305026958,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00002464361899856142",
+            "extra": "mean: 116.90101982606735 usec\nrounds: 4691"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8333.41747340942,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014710461141726716",
+            "extra": "mean: 119.9987883951377 usec\nrounds: 3757"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "98392360a87a9880530ecf366890953d26e1525a",
+          "message": "MSAL Python 1.28.0\n\nbroker-test.py shall test Azure CLI in MSA-PT mode",
+          "timestamp": "2024-03-15T21:57:14-07:00",
+          "tree_id": "6da784d8f76e90268f301a44b81545997e1df60f",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/98392360a87a9880530ecf366890953d26e1525a"
+        },
+        "date": 1710565179473,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46183.69359869059,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000007607153485102686",
+            "extra": "mean: 21.652664004949838 usec\nrounds: 9518"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44868.9123415144,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000024743641734213785",
+            "extra": "mean: 22.28714599517409 usec\nrounds: 16617"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8757.50104087482,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001764364417032965",
+            "extra": "mean: 114.1878254233249 usec\nrounds: 3603"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8476.584632224396,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014020053359507454",
+            "extra": "mean: 117.97204220653 usec\nrounds: 6018"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "98392360a87a9880530ecf366890953d26e1525a",
+          "message": "MSAL Python 1.28.0\n\nbroker-test.py shall test Azure CLI in MSA-PT mode",
+          "timestamp": "2024-03-15T21:57:14-07:00",
+          "tree_id": "6da784d8f76e90268f301a44b81545997e1df60f",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/98392360a87a9880530ecf366890953d26e1525a"
+        },
+        "date": 1710785387634,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 48357.95061283244,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016356139115024722",
+            "extra": "mean: 20.67912281904346 usec\nrounds: 8712"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 42518.3661061269,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002523366091354944",
+            "extra": "mean: 23.51924807044502 usec\nrounds: 15677"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8629.291678741982,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017424226610804145",
+            "extra": "mean: 115.8843665539168 usec\nrounds: 4144"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8287.068398862477,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013733384237022293",
+            "extra": "mean: 120.66993439287465 usec\nrounds: 4405"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "2d03ad97c5ef865b8d9d1a79b61fb08d6fbdea29",
+          "message": "MSAL Python 1.28.0\n\nbroker-test.py shall test Azure CLI in MSA-PT mode",
+          "timestamp": "2024-03-18T23:48:45-07:00",
+          "tree_id": "1af7f331c6f514557d801f8be8c3d244b763bd06",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/2d03ad97c5ef865b8d9d1a79b61fb08d6fbdea29"
+        },
+        "date": 1710831123324,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 48676.11998447374,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001653915052935664",
+            "extra": "mean: 20.543954619204875 usec\nrounds: 12935"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44111.01695232924,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000022019903746559604",
+            "extra": "mean: 22.6700735800469 usec\nrounds: 15670"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8752.581941738974,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017488936547732154",
+            "extra": "mean: 114.25200091315213 usec\nrounds: 4380"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8450.47360504753,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001378485205579073",
+            "extra": "mean: 118.33656274634036 usec\nrounds: 4311"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "2d03ad97c5ef865b8d9d1a79b61fb08d6fbdea29",
+          "message": "MSAL Python 1.28.0\n\nbroker-test.py shall test Azure CLI in MSA-PT mode",
+          "timestamp": "2024-03-18T23:48:45-07:00",
+          "tree_id": "1af7f331c6f514557d801f8be8c3d244b763bd06",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/2d03ad97c5ef865b8d9d1a79b61fb08d6fbdea29"
+        },
+        "date": 1710831396238,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47917.43008452393,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000014742343188962805",
+            "extra": "mean: 20.869232724627558 usec\nrounds: 9088"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 41110.333250905845,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000003783336080717844",
+            "extra": "mean: 24.32478457172238 usec\nrounds: 15439"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8794.730453583814,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001697861371759451",
+            "extra": "mean: 113.70445123676353 usec\nrounds: 4204"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8153.505107588515,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000172264578011317",
+            "extra": "mean: 122.64663930476897 usec\nrounds: 5007"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "2d03ad97c5ef865b8d9d1a79b61fb08d6fbdea29",
+          "message": "MSAL Python 1.28.0\n\nbroker-test.py shall test Azure CLI in MSA-PT mode",
+          "timestamp": "2024-03-18T23:48:45-07:00",
+          "tree_id": "1af7f331c6f514557d801f8be8c3d244b763bd06",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/2d03ad97c5ef865b8d9d1a79b61fb08d6fbdea29"
+        },
+        "date": 1710831564170,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46023.46872098658,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016739433622520047",
+            "extra": "mean: 21.728045012478656 usec\nrounds: 7198"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43747.99438579343,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000024210977433560596",
+            "extra": "mean: 22.85819073627605 usec\nrounds: 20683"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8536.221004185178,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017134744290995456",
+            "extra": "mean: 117.14785729068113 usec\nrounds: 5802"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8565.827104697495,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013460339252889588",
+            "extra": "mean: 116.74295870991845 usec\nrounds: 5425"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": false,
+          "id": "2d03ad97c5ef865b8d9d1a79b61fb08d6fbdea29",
+          "message": "MSAL Python 1.28.0\n\nbroker-test.py shall test Azure CLI in MSA-PT mode",
+          "timestamp": "2024-03-18T23:48:45-07:00",
+          "tree_id": "1af7f331c6f514557d801f8be8c3d244b763bd06",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/2d03ad97c5ef865b8d9d1a79b61fb08d6fbdea29"
+        },
+        "date": 1710831668789,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 49598.343500511415,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001544775943481078",
+            "extra": "mean: 20.161963675050735 usec\nrounds: 16903"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47251.25896815966,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016238668115218469",
+            "extra": "mean: 21.16345726732597 usec\nrounds: 21342"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8881.97556072983,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000016502194383524158",
+            "extra": "mean: 112.58756491307325 usec\nrounds: 4999"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8827.205458813418,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013829292892991918",
+            "extra": "mean: 113.28613621444167 usec\nrounds: 5785"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "9e6ef48167ed6ee9f432cef1ef53433fa244cf81",
+          "message": "Merge branch 'release-1.28.0'",
+          "timestamp": "2024-03-18T23:57:26-07:00",
+          "tree_id": "f109b4e4441174a8591e13fba4daf665bb3df955",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/9e6ef48167ed6ee9f432cef1ef53433fa244cf81"
+        },
+        "date": 1710831701591,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 49256.265965166014,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000015062478634023794",
+            "extra": "mean: 20.301985552603583 usec\nrounds: 8652"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44755.02658168189,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000025685330919871148",
+            "extra": "mean: 22.34385892219082 usec\nrounds: 19188"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8797.145538810199,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001680711750855295",
+            "extra": "mean: 113.6732358909284 usec\nrounds: 5422"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8253.411795333823,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001418814579925664",
+            "extra": "mean: 121.16201454595583 usec\nrounds: 5706"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "edc06b9d433400bad48803c767b7fc1e9577b464",
+          "message": "Friendly hint for a typical oidc_authority error",
+          "timestamp": "2024-03-20T20:20:01-07:00",
+          "tree_id": "091cee786ee413b2d880f9da474f6c7ee77cee1f",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/edc06b9d433400bad48803c767b7fc1e9577b464"
+        },
+        "date": 1710991355797,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47776.96520063889,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016220568579449766",
+            "extra": "mean: 20.93058853362724 usec\nrounds: 9663"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47228.483354698255,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001794443408766775",
+            "extra": "mean: 21.173663200017213 usec\nrounds: 17019"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8770.88975411288,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001814165797380566",
+            "extra": "mean: 114.01351835839414 usec\nrounds: 4630"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8658.250711567265,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013862441857648032",
+            "extra": "mean: 115.49677103528755 usec\nrounds: 4647"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "10370ca55825931f54715d617bdd2da0b0148014",
+          "message": "Friendly hint covers most flows, tested. TODO: OBO",
+          "timestamp": "2024-03-21T16:02:23-07:00",
+          "tree_id": "b6cff515e97f3b9b920ef813d37f1a9169ea5a98",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/10370ca55825931f54715d617bdd2da0b0148014"
+        },
+        "date": 1711062392372,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 50880.6594701084,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001533988120332183",
+            "extra": "mean: 19.65383331140754 usec\nrounds: 15316"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 49808.1363074633,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000018533623951329388",
+            "extra": "mean: 20.077041104831682 usec\nrounds: 15205"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 9117.784112586605,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000018016780403408977",
+            "extra": "mean: 109.67577074122148 usec\nrounds: 4532"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 9122.693978435274,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013985435815621051",
+            "extra": "mean: 109.61674285730234 usec\nrounds: 4095"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "98bcfb3c0ccb53e7b63546abe37ff7f85fbc360e",
+          "message": "Convert most built-in samples from json to dotenv",
+          "timestamp": "2024-04-02T21:29:22-07:00",
+          "tree_id": "103390a73d8f83b285e355fe2d08e587944603cd",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/98bcfb3c0ccb53e7b63546abe37ff7f85fbc360e"
+        },
+        "date": 1712120539464,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47208.53230644297,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016689541233083466",
+            "extra": "mean: 21.182611514137694 usec\nrounds: 8685"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 42960.33290703907,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000021410087475993813",
+            "extra": "mean: 23.277287030430568 usec\nrounds: 12591"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8536.548924915052,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000018384084075291697",
+            "extra": "mean: 117.1433572039126 usec\nrounds: 5851"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8182.79222346255,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013604034103143067",
+            "extra": "mean: 122.207673455608 usec\nrounds: 5892"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": false,
+          "id": "98bcfb3c0ccb53e7b63546abe37ff7f85fbc360e",
+          "message": "Convert most built-in samples from json to dotenv",
+          "timestamp": "2024-04-02T21:29:22-07:00",
+          "tree_id": "103390a73d8f83b285e355fe2d08e587944603cd",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/98bcfb3c0ccb53e7b63546abe37ff7f85fbc360e"
+        },
+        "date": 1712120962363,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47987.03623682451,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017108886211142793",
+            "extra": "mean: 20.838961486698683 usec\nrounds: 9659"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46092.93646716026,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000020381489071261644",
+            "extra": "mean: 21.695298165966665 usec\nrounds: 17393"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8651.601174039133,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017922463100767615",
+            "extra": "mean: 115.58554074368347 usec\nrounds: 4921"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8324.69994628264,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000013245335742426058",
+            "extra": "mean: 120.12444970422578 usec\nrounds: 5070"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "97bb5a850927323443e47788b3103c4a775a8577",
+          "message": "Managed Identity for Machine Learning",
+          "timestamp": "2024-04-04T17:51:22-07:00",
+          "tree_id": "794ced084ed74f42b503ac79cb2271c9a012ab61",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/97bb5a850927323443e47788b3103c4a775a8577"
+        },
+        "date": 1712278532712,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46933.15202092216,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002508664346153429",
+            "extra": "mean: 21.30690049443544 usec\nrounds: 8492"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44533.023446697436,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000025530962876831977",
+            "extra": "mean: 22.45524607591313 usec\nrounds: 16564"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8553.237868518663,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001887485620416007",
+            "extra": "mean: 116.91478892229033 usec\nrounds: 5344"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8272.281709180335,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001548202989827564",
+            "extra": "mean: 120.88563169823259 usec\nrounds: 4423"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "c2fa9170ec1649b3ed708482c55d412069b2a4c5",
+          "message": "Managed Identity for Machine Learning",
+          "timestamp": "2024-04-04T18:05:15-07:00",
+          "tree_id": "56387a8b098fe3ae361240774287eeba9b1f7ee6",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/c2fa9170ec1649b3ed708482c55d412069b2a4c5"
+        },
+        "date": 1712279333572,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46336.77824783263,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000003181149506998981",
+            "extra": "mean: 21.581129241474063 usec\nrounds: 8782"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43966.58697985816,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000031721903736334735",
+            "extra": "mean: 22.744544634727205 usec\nrounds: 16299"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8583.732528709088,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017956704528901302",
+            "extra": "mean: 116.49943618995668 usec\nrounds: 4294"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8083.384680626863,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001555745272088282",
+            "extra": "mean: 123.71055436674462 usec\nrounds: 5141"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "2f83a40edea640cf81135f7a6dab34ec4616181d",
+          "message": "Managed Identity for Machine Learning",
+          "timestamp": "2024-04-04T19:46:43-07:00",
+          "tree_id": "6de87149574eb06c33d1d913e287d97a5366fdd0",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/2f83a40edea640cf81135f7a6dab34ec4616181d"
+        },
+        "date": 1712285408824,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47022.39984068468,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016887674258465217",
+            "extra": "mean: 21.26646031227825 usec\nrounds: 8970"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43599.59621338114,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000020882620722454215",
+            "extra": "mean: 22.935992230430113 usec\nrounds: 16603"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8600.146547950493,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000018007081947488067",
+            "extra": "mean: 116.27708835244333 usec\nrounds: 4267"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8311.78868107153,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014678615266520753",
+            "extra": "mean: 120.31104716092027 usec\nrounds: 5195"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "52b1fc5a442ff5dd33f48ce717f1032c8002ea9e",
+          "message": "client_credential has its link in RTD now. Finally.",
+          "timestamp": "2024-04-05T14:56:35-07:00",
+          "tree_id": "2ba2c78c6888a29e84076639967d7983adb36a29",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/52b1fc5a442ff5dd33f48ce717f1032c8002ea9e"
+        },
+        "date": 1712354368920,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47777.93921578228,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017317679375374531",
+            "extra": "mean: 20.93016183648361 usec\nrounds: 17598"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 45454.98355859838,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016276805998925903",
+            "extra": "mean: 21.999787959682088 usec\nrounds: 12026"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8673.543103385502,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001856378873847025",
+            "extra": "mean: 115.29313777315234 usec\nrounds: 4580"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8735.534833318558,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014255087277665594",
+            "extra": "mean: 114.47495992871087 usec\nrounds: 4467"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "1de1e803b532f5d41b033e1cd623d780c38ed6b4",
+          "message": "Managed Identity for Machine Learning",
+          "timestamp": "2024-04-09T00:43:43-07:00",
+          "tree_id": "c0599a412d0611ccf69a89976d849fad71ff365a",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/1de1e803b532f5d41b033e1cd623d780c38ed6b4"
+        },
+        "date": 1712648843963,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46964.32018900775,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001552495176230654",
+            "extra": "mean: 21.2927600351821 usec\nrounds: 9093"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43230.92503872956,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000022972290466339397",
+            "extra": "mean: 23.131589229333485 usec\nrounds: 17399"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8577.914116230786,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017729347647178883",
+            "extra": "mean: 116.57845793860773 usec\nrounds: 5385"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8433.588211454862,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014231509663102213",
+            "extra": "mean: 118.57349148749721 usec\nrounds: 4464"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "cf09534b05d5c4fdb32973b76576f58078c55ac1",
+          "message": "Managed Identity for Machine Learning",
+          "timestamp": "2024-04-09T15:06:37-07:00",
+          "tree_id": "0f9b8f41647aa8d01cf69c9ac3066426bab15e6a",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/cf09534b05d5c4fdb32973b76576f58078c55ac1"
+        },
+        "date": 1712707275089,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46250.406104807116,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00000186206816281386",
+            "extra": "mean: 21.62143177151613 usec\nrounds: 8259"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 40985.85469520851,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002133188391063635",
+            "extra": "mean: 24.398661622076798 usec\nrounds: 16387"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8489.044258010315,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001781497224749933",
+            "extra": "mean: 117.79889108911095 usec\nrounds: 3131"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8076.973656895665,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014532249037809493",
+            "extra": "mean: 123.80874848418705 usec\nrounds: 4123"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "5d5f20f1c0d4523661022f9c2f2a2128748932ec",
+          "message": "CCA federated by managed identity",
+          "timestamp": "2024-04-09T15:06:37-07:00",
+          "tree_id": "c0599a412d0611ccf69a89976d849fad71ff365a",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/5d5f20f1c0d4523661022f9c2f2a2128748932ec"
+        },
+        "date": 1712732480135,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46554.12119577227,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000013965194632325195",
+            "extra": "mean: 21.480375406395023 usec\nrounds: 8002"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44932.32827218316,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001886899642741763",
+            "extra": "mean: 22.255690689838637 usec\nrounds: 16262"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8492.186866031903,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000226744730199708",
+            "extra": "mean: 117.75529857920618 usec\nrounds: 4364"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8542.04715371755,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014178410084345529",
+            "extra": "mean: 117.06795596004102 usec\nrounds: 4337"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "5d5f20f1c0d4523661022f9c2f2a2128748932ec",
+          "message": "CCA federated by managed identity",
+          "timestamp": "2024-04-09T15:06:37-07:00",
+          "tree_id": "c0599a412d0611ccf69a89976d849fad71ff365a",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/5d5f20f1c0d4523661022f9c2f2a2128748932ec"
+        },
+        "date": 1712733361491,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46669.82129895471,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002005299222258599",
+            "extra": "mean: 21.427122970843634 usec\nrounds: 8994"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44024.64081522783,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000025201987727081126",
+            "extra": "mean: 22.714552157211617 usec\nrounds: 17198"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8635.785877576644,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001768696516392455",
+            "extra": "mean: 115.79722033133804 usec\nrounds: 4466"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8549.310648626699,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015091212764234973",
+            "extra": "mean: 116.96849501668687 usec\nrounds: 4214"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "f2a4aa516a0abb00c8ea0db83e6a5959ba324a63",
+          "message": "Managed Identity for Machine Learning",
+          "timestamp": "2024-04-10T20:46:38-07:00",
+          "tree_id": "5456606a52522e71f25542a82c533b03c2804130",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/f2a4aa516a0abb00c8ea0db83e6a5959ba324a63"
+        },
+        "date": 1712807363250,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47596.74953896331,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000019678434588506544",
+            "extra": "mean: 21.009838060084064 usec\nrounds: 8392"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 41322.553501745366,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000024340061874466104",
+            "extra": "mean: 24.19985976805045 usec\nrounds: 15781"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8564.331027855003,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000018914969916451386",
+            "extra": "mean: 116.76335218098839 usec\nrounds: 3714"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8060.557010249488,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015618870336506585",
+            "extra": "mean: 124.06090531069246 usec\nrounds: 3992"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "d61a0b1997400c5678aa0e418e0311dd127fc102",
+          "message": "CCA federated by managed identity",
+          "timestamp": "2024-04-10T20:50:25-07:00",
+          "tree_id": "ed4a2b5ecb8588814fe3e086d9fab2ae7659b7fa",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/d61a0b1997400c5678aa0e418e0311dd127fc102"
+        },
+        "date": 1712807563838,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46214.89791267026,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017258585817687695",
+            "extra": "mean: 21.638044119228496 usec\nrounds: 8817"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 45547.56334863741,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000019458187098803197",
+            "extra": "mean: 21.95507128110544 usec\nrounds: 16947"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8247.565920034587,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000028671462802166823",
+            "extra": "mean: 121.24789419031481 usec\nrounds: 4527"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8390.863572049353,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014229210809765857",
+            "extra": "mean: 119.17724456050998 usec\nrounds: 4412"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "52b1fc5a442ff5dd33f48ce717f1032c8002ea9e",
+          "message": "client_credential has its link in RTD now. Finally.",
+          "timestamp": "2024-04-05T14:56:35-07:00",
+          "tree_id": "2ba2c78c6888a29e84076639967d7983adb36a29",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/52b1fc5a442ff5dd33f48ce717f1032c8002ea9e"
+        },
+        "date": 1712987262390,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46504.85860813538,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001575328189425966",
+            "extra": "mean: 21.50312956386591 usec\nrounds: 8737"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 45259.9646388912,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017149559746527217",
+            "extra": "mean: 22.094581999313256 usec\nrounds: 16366"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8700.732060136179,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017165746346666255",
+            "extra": "mean: 114.93285772833562 usec\nrounds: 4393"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8534.283716789078,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014527475400878516",
+            "extra": "mean: 117.17444992281533 usec\nrounds: 3894"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "34331512+pmaytak@users.noreply.github.com",
+            "name": "Peter",
+            "username": "pmaytak"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b8aa2eb6120daa13766c0dbb8f0c09743734d841",
+          "message": "Create CODEOWNERS",
+          "timestamp": "2024-04-12T22:46:56-07:00",
+          "tree_id": "b88690c3296ccd0724341dfe594ad450d604677c",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/b8aa2eb6120daa13766c0dbb8f0c09743734d841"
+        },
+        "date": 1712987334174,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 48095.29684172367,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000015965367304729262",
+            "extra": "mean: 20.792053811225866 usec\nrounds: 9236"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46582.916497130005,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000019694415635322605",
+            "extra": "mean: 21.46709727935584 usec\nrounds: 16283"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8545.708835423104,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000018805829518858978",
+            "extra": "mean: 117.01779445782971 usec\nrounds: 4583"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8535.530756993,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014364219520127248",
+            "extra": "mean: 117.15733074720853 usec\nrounds: 3867"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a4088abc92ad86b6326dddca303e407cdb27e84a",
+          "message": "Update CODEOWNERS\n\nCo-authored-by: Bogdan Gavril <bogavril@microsoft.com>",
+          "timestamp": "2024-04-15T10:42:23-07:00",
+          "tree_id": "21957fac372137b971912c920aa305eb17fc72ae",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/a4088abc92ad86b6326dddca303e407cdb27e84a"
+        },
+        "date": 1713203098585,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43551.14477866921,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000005762182160528589",
+            "extra": "mean: 22.96150893580614 usec\nrounds: 8561"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 42954.962471375584,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002298159097044908",
+            "extra": "mean: 23.28019726862483 usec\nrounds: 16987"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8349.156329614269,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000018931048193890338",
+            "extra": "mean: 119.77258066818352 usec\nrounds: 5535"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8118.930703826099,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015246452084761063",
+            "extra": "mean: 123.1689290719951 usec\nrounds: 3567"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "34331512+pmaytak@users.noreply.github.com",
+            "name": "Peter",
+            "username": "pmaytak"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f821b2dd22572d75f9822ce60411c1f94daa47da",
+          "message": "Add CODEOWNERS file (#689)\n\n* Create CODEOWNERS\r\n\r\n* Update CODEOWNERS\r\n\r\nCo-authored-by: Bogdan Gavril <bogavril@microsoft.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Ray Luo <rayluo@microsoft.com>\r\nCo-authored-by: Bogdan Gavril <bogavril@microsoft.com>",
+          "timestamp": "2024-04-15T10:45:51-07:00",
+          "tree_id": "21957fac372137b971912c920aa305eb17fc72ae",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/f821b2dd22572d75f9822ce60411c1f94daa47da"
+        },
+        "date": 1713203287920,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46708.94663020134,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000052062044295470606",
+            "extra": "mean: 21.409174732992465 usec\nrounds: 9174"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43677.44840926416,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002609969611925358",
+            "extra": "mean: 22.89511032397891 usec\nrounds: 15953"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8471.039703373279,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00002033276766935375",
+            "extra": "mean: 118.04926372872352 usec\nrounds: 4425"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8221.979525523135,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014522658750509263",
+            "extra": "mean: 121.62521165319656 usec\nrounds: 5698"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "48a7bd3c8e7040c02165e4e12f3a8004f18391a3",
+          "message": "Should have used the constant instead of a raw str",
+          "timestamp": "2024-04-15T14:14:59-07:00",
+          "tree_id": "0a4ed9980484e138796482accd50f42fa0ef2e94",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/48a7bd3c8e7040c02165e4e12f3a8004f18391a3"
+        },
+        "date": 1713215865615,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46082.935103771226,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001951820031050027",
+            "extra": "mean: 21.70000668898723 usec\nrounds: 8671"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 39692.76509701011,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000023558145779175855",
+            "extra": "mean: 25.193508125623776 usec\nrounds: 15014"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8423.57396496906,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001846179259913644",
+            "extra": "mean: 118.71445590181543 usec\nrounds: 3016"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 7916.094957228275,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015354085389504365",
+            "extra": "mean: 126.32491214457816 usec\nrounds: 3096"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "fff985576cf675f850cace8282dfe55099eb18c5",
+          "message": "Merges remote-tracking branch and fixes #516",
+          "timestamp": "2024-04-15T15:16:10-07:00",
+          "tree_id": "24b5711c6544218c78804fd67abae15f51f846a3",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/fff985576cf675f850cace8282dfe55099eb18c5"
+        },
+        "date": 1713219528917,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47257.327847110784,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000015205911393036457",
+            "extra": "mean: 21.160739414535854 usec\nrounds: 11478"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44797.888515192986,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001890914266098377",
+            "extra": "mean: 22.32248066024038 usec\nrounds: 17141"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8609.686484979182,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001834278894016723",
+            "extra": "mean: 116.14824787692811 usec\nrounds: 4357"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8576.079374449533,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014132272703645164",
+            "extra": "mean: 116.60339839895504 usec\nrounds: 4498"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": false,
+          "id": "fff985576cf675f850cace8282dfe55099eb18c5",
+          "message": "Merges remote-tracking branch and fixes #516",
+          "timestamp": "2024-04-15T15:16:10-07:00",
+          "tree_id": "24b5711c6544218c78804fd67abae15f51f846a3",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/fff985576cf675f850cace8282dfe55099eb18c5"
+        },
+        "date": 1713219797006,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47128.17971576758,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016847257241402454",
+            "extra": "mean: 21.21872743719469 usec\nrounds: 9396"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44181.03223117656,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000022526571202850308",
+            "extra": "mean: 22.634147494959272 usec\nrounds: 16387"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8489.29254012598,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000018366375786610037",
+            "extra": "mean: 117.79544588354591 usec\nrounds: 4555"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8136.728749886304,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000024556740102635458",
+            "extra": "mean: 122.89951290486034 usec\nrounds: 5463"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "8f91c1c88ecd6eac89e27439980a599336f1d22f",
+          "message": "Promote TokenCache._find() to TokenCache.search()",
+          "timestamp": "2024-04-16T21:21:13-07:00",
+          "tree_id": "138d014477d3ac2f16aa7b760512896f3cbb7000",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/8f91c1c88ecd6eac89e27439980a599336f1d22f"
+        },
+        "date": 1713327822955,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47298.48862184902,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001787249754629823",
+            "extra": "mean: 21.142324609883218 usec\nrounds: 8903"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 45537.49685336058,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000018202963652807474",
+            "extra": "mean: 21.959924657698924 usec\nrounds: 20387"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8579.267800199617,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017943498196060676",
+            "extra": "mean: 116.56006354956452 usec\nrounds: 6074"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8141.108028244864,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015286429800077265",
+            "extra": "mean: 122.83340259465754 usec\nrounds: 4702"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "38bddfdc184398ef98ddc7ec51404dc48e878486",
+          "message": "Change most find() in application.py to search()",
+          "timestamp": "2024-04-30T10:36:36-07:00",
+          "tree_id": "55a59a3c75585237854d2eec6aaaaf1d7d9035b9",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/38bddfdc184398ef98ddc7ec51404dc48e878486"
+        },
+        "date": 1714498936264,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47861.7044386249,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001623765209895687",
+            "extra": "mean: 20.89353088714888 usec\nrounds: 8094"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43150.21570693328,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002374465951183156",
+            "extra": "mean: 23.174855180140437 usec\nrounds: 18706"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8394.761317442979,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001737318684659272",
+            "extra": "mean: 119.12190974651764 usec\nrounds: 4853"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8338.217343699353,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014589345996349553",
+            "extra": "mean: 119.92971144553276 usec\nrounds: 5784"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "b3dba1bb043516d944bb084934af263f37f8134a",
+          "message": "Managed Identity for Machine Learning",
+          "timestamp": "2024-04-30T12:47:12-07:00",
+          "tree_id": "7c7721082375ac52b4dbd7216ffb965a9cb5153c",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/b3dba1bb043516d944bb084934af263f37f8134a"
+        },
+        "date": 1714506773212,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47000.89746823597,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000026534754677500677",
+            "extra": "mean: 21.276189474377965 usec\nrounds: 14878"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46611.08838385676,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016474137174921302",
+            "extra": "mean: 21.454122499021906 usec\nrounds: 13894"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8572.279389557818,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001790291574439087",
+            "extra": "mean: 116.65508723597293 usec\nrounds: 4975"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8734.364229694223,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014061271930303573",
+            "extra": "mean: 114.49030217909845 usec\nrounds: 5414"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "0a90905f516bc6aa9e879611fd05d82ddd411129",
+          "message": "Managed Identity for Machine Learning",
+          "timestamp": "2024-04-30T16:54:39-07:00",
+          "tree_id": "5483f2572bddf0fd4c0cbcb67e4533758aeac56d",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/0a90905f516bc6aa9e879611fd05d82ddd411129"
+        },
+        "date": 1714521434294,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47181.9507130761,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001741437163178435",
+            "extra": "mean: 21.19454547526493 usec\nrounds: 8763"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 45300.381717762364,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001678189860412109",
+            "extra": "mean: 22.07486917506256 usec\nrounds: 16824"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8674.880152667736,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017030392326135976",
+            "extra": "mean: 115.27536777467475 usec\nrounds: 6107"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8196.292538659904,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000022424242080846513",
+            "extra": "mean: 122.00638218844009 usec\nrounds: 5356"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "dd4dbe7091dbe759521d62698c17c58731a3dc3a",
+          "message": "Upgrade action's versions and also enable cache\n\nhttps://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows",
+          "timestamp": "2024-05-01T23:21:40-07:00",
+          "tree_id": "39cf3fd47524af2f83490d0f10c028aefbdb024c",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/dd4dbe7091dbe759521d62698c17c58731a3dc3a"
+        },
+        "date": 1714631098676,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43536.255404448755,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000020314052552814545",
+            "extra": "mean: 22.969361758609466 usec\nrounds: 7939"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 38842.3431622749,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000024820390438247793",
+            "extra": "mean: 25.745099769656445 usec\nrounds: 15626"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8404.323918622176,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001935259332980409",
+            "extra": "mean: 118.98637054959471 usec\nrounds: 3932"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 7967.117203358906,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015431414675097295",
+            "extra": "mean: 125.51591428558423 usec\nrounds: 4620"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": true,
+          "id": "dd4dbe7091dbe759521d62698c17c58731a3dc3a",
+          "message": "Upgrade action's versions and also enable cache\n\nhttps://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows",
+          "timestamp": "2024-05-01T23:21:40-07:00",
+          "tree_id": "39cf3fd47524af2f83490d0f10c028aefbdb024c",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/dd4dbe7091dbe759521d62698c17c58731a3dc3a"
+        },
+        "date": 1714631305039,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 46639.41664420757,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000020320242233062076",
+            "extra": "mean: 21.441091504822584 usec\nrounds: 8546"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43246.19058845729,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000006244048744880263",
+            "extra": "mean: 23.12342396851266 usec\nrounds: 16697"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8636.036097438278,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001825957926062887",
+            "extra": "mean: 115.7938652313683 usec\nrounds: 4504"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8483.414660690396,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015607602231875325",
+            "extra": "mean: 117.87706247977016 usec\nrounds: 6210"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "committer": {
+            "email": "rayluo@microsoft.com",
+            "name": "Ray Luo",
+            "username": "rayluo"
+          },
+          "distinct": false,
+          "id": "dd4dbe7091dbe759521d62698c17c58731a3dc3a",
+          "message": "Upgrade action's versions and also enable cache\n\nhttps://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows",
+          "timestamp": "2024-05-01T23:21:40-07:00",
+          "tree_id": "39cf3fd47524af2f83490d0f10c028aefbdb024c",
+          "url": "https://github.com/AzureAD/microsoft-authentication-library-for-python/commit/dd4dbe7091dbe759521d62698c17c58731a3dc3a"
+        },
+        "date": 1714631574330,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44668.66770186611,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001936970112975539",
+            "extra": "mean: 22.38705677712038 usec\nrounds: 8595"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 44219.4315922026,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000018780790375509373",
+            "extra": "mean: 22.61449240736813 usec\nrounds: 16793"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8397.935810560382,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000019016864819801955",
+            "extra": "mean: 119.07688062374834 usec\nrounds: 5001"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8315.830822600557,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000015884198862021277",
+            "extra": "mean: 120.2525666205504 usec\nrounds: 5764"
           }
         ]
       }
