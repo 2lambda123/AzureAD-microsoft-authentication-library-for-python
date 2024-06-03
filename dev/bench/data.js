@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1717428770724,
+  "lastUpdate": 1717428773843,
   "repoUrl": "https://github.com/2lambda123/AzureAD-microsoft-authentication-library-for-python",
   "entries": {
     "Benchmark": [
@@ -14471,6 +14471,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000014171699142844225",
             "extra": "mean: 121.88141461430251 usec\nrounds: 4954"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "54554557+2lambda123@users.noreply.github.com",
+            "name": "Robert Bongart (MSc MSc MA)",
+            "username": "2lambda123"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d515093756a15bdc7e42478053dd1721c4534951",
+          "message": "Merge pull request #1 from 2lambda123/mi\n\nAdded Managed Identity implementation, throttling refactor, and sample code",
+          "timestamp": "2024-06-03T09:35:11-05:00",
+          "tree_id": "61956f787b383d2dcc564e1ce86df8046cf32898",
+          "url": "https://github.com/2lambda123/AzureAD-microsoft-authentication-library-for-python/commit/d515093756a15bdc7e42478053dd1721c4534951"
+        },
+        "date": 1717428772841,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47046.97904276232,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000015680898702895213",
+            "extra": "mean: 21.255349872540634 usec\nrounds: 8646"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 43459.16900625402,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000031103158755625173",
+            "extra": "mean: 23.01010403250219 usec\nrounds: 16466"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8622.946866423414,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000016749093140232474",
+            "extra": "mean: 115.969634916094 usec\nrounds: 3580"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8257.084182255101,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014479019187685965",
+            "extra": "mean: 121.10812702491897 usec\nrounds: 3889"
           }
         ]
       }
