@@ -129,7 +129,7 @@ def acquire_and_use_token():
         # Calling graph using the access token
         graph_data = requests.get(  # Use token to call downstream service
             config["endpoint"],
-            headers={'Authorization': 'Bearer ' + result['access_token']},).json()
+            headers={'Authorization': 'Bearer ' + result['access_token']},timeout=60).json()
         print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
     else:
         print("Token acquisition failed", result)  # Examine result["error_description"] etc. to diagnose error

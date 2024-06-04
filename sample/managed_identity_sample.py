@@ -56,7 +56,7 @@ def acquire_and_use_token():
             api_result = requests.get(
                 os.getenv('ENDPOINT'),
                 headers={'Authorization': 'Bearer ' + result['access_token']},
-                ).json()  # Assuming the response is JSON
+                timeout=60).json()  # Assuming the response is JSON
             print("Web API call result", json.dumps(api_result, indent=2))
         else:
             print("Token acquisition result", json.dumps(result, indent=2))
