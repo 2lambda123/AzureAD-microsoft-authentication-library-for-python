@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1718255175988,
+  "lastUpdate": 1718255179034,
   "repoUrl": "https://github.com/2lambda123/AzureAD-microsoft-authentication-library-for-python",
   "entries": {
     "Benchmark": [
@@ -14919,6 +14919,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000014744656056030766",
             "extra": "mean: 122.22383910254699 usec\nrounds: 5258"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "54554557+2lambda123@users.noreply.github.com",
+            "name": "Robert Bongart (MSc MSc MA)",
+            "username": "2lambda123"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5eb996a3f056a7ba13add6323ca34638c9b72d4c",
+          "message": "Merge pull request #3 from 2lambda123/pixeebot/drip-2024-06-04-pixee-python/add-requests-timeouts\n\nAdd timeout to `requests` calls",
+          "timestamp": "2024-06-13T07:04:07+02:00",
+          "tree_id": "cb5dc16287e3395affe6d14fe96523d744895bf7",
+          "url": "https://github.com/2lambda123/AzureAD-microsoft-authentication-library-for-python/commit/5eb996a3f056a7ba13add6323ca34638c9b72d4c"
+        },
+        "date": 1718255178582,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 47339.302213324445,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000027356768955110366",
+            "extra": "mean: 21.12409674932921 usec\nrounds: 9044"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_hit",
+            "value": 45793.33787278725,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000018219052244352606",
+            "extra": "mean: 21.837237608186044 usec\nrounds: 15151"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_1_tenant_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8608.50743787946,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000019313847921845726",
+            "extra": "mean: 116.1641558906907 usec\nrounds: 4779"
+          },
+          {
+            "name": "tests/test_benchmark.py::test_cca_many_tenants_with_10_tokens_per_tenant_and_cache_miss",
+            "value": 8609.301213253124,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014260419876088605",
+            "extra": "mean: 116.15344558517758 usec\nrounds: 4870"
           }
         ]
       }
