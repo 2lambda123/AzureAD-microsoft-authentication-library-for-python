@@ -54,6 +54,14 @@ scopes = os.getenv("SCOPE", "").split()
 
 
 def acquire_and_use_token():
+    """Acquire and use a token for authentication.
+
+    This function attempts to acquire a token for authentication. It first
+    checks the cache to see if the end user has signed in before. If a
+    suitable token is not found in the cache, it prompts the user to sign in
+    through an interactive process.
+    """
+
     # The pattern to acquire a token looks like this.
     result = None
 
