@@ -56,6 +56,19 @@ scopes = os.getenv("SCOPE", "").split()
 
 
 def acquire_and_use_token():
+    """Acquire and use a token for accessing a web API.
+
+    This function first checks the cache to see if the end user has signed
+    in before. If a suitable token is not found in the cache, it acquires a
+    new token from Azure Active Directory using the Username Password Flow.
+    If the token is successfully obtained, it can be used to make a call to
+    a web API specified by the 'ENDPOINT' environment variable. The response
+    from the API is assumed to be in JSON format.  Prints the token source
+    if obtained successfully, and makes a web API call using the access
+    token if 'ENDPOINT' is provided. Otherwise, prints the token acquisition
+    result.
+    """
+
     # The pattern to acquire a token looks like this.
     result = None
 
