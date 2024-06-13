@@ -58,6 +58,13 @@ global_app = msal.ConfidentialClientApplication(
 
 
 def acquire_and_use_token():
+    """Acquire and use a token to access a downstream service.
+
+    This function acquires a token for the specified scope using MSAL
+    library and then uses the obtained token to make a call to a downstream
+    service (Graph API in this case).
+    """
+
     # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
     # a token from cache, and fall back to acquire a fresh token when needed.
     result = global_app.acquire_token_for_client(scopes=config["scope"])
