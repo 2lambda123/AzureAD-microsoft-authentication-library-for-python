@@ -13,16 +13,25 @@ import secrets
 logger = logging.getLogger(__name__)
 
 def decode_part(raw, encoding="utf-8"):
-    """Decode a part of the JWT.
+    """    Decode a part of the JWT.
 
-    JWT is encoded by padding-less base64url,
-    based on `JWS specs <https://tools.ietf.org/html/rfc7515#appendix-C>`_.
+    JWT is encoded by padding-less base64url, based on `JWS specs
+    <https://tools.ietf.org/html/rfc7515#appendix-C>`_.
 
-    :param encoding:
-        If you are going to decode the first 2 parts of a JWT, i.e. the header
+    Args:
+        raw (str): The part of the JWT to be decoded.
+        encoding (str?): The encoding to be used for decoding.
+            If decoding the first 2 parts (header or payload) of a JWT,
+            use "utf-8". For decoding the last part (signature), use `None`.
+
+    Returns:
+        str: The decoded part of the JWT.
+
+    Note:
+        If you are going to decode the first 2 parts of a JWT, i.e., the header
         or the payload, the default value "utf-8" would work fine.
-        If you are going to decode the last part i.e. the signature part,
-        it is a binary string so you should use `None` as encoding here.
+        - If you are going to decode the last part, i.e., the signature part,
+        it is a binary string, so you should use `None` as encoding here.
     """
     raw += '=' * (-len(raw) % 4)  # https://stackoverflow.com/a/32517907/728675
     raw = str(
@@ -37,6 +46,16 @@ def decode_part(raw, encoding="utf-8"):
 base64decode = decode_part  # Obsolete. For backward compatibility only.
 
 def _epoch_to_local(epoch):
+    """Convert the given epoch time to a local date and time string.
+
+    Args:
+        epoch (int): The epoch time to be converted.
+
+    Returns:
+        str: A string representing the local date and time in the format "%Y-%m-%d
+            %H:%M:%S".
+    """
+
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(epoch))
 
 class IdTokenError(RuntimeError):  # We waised RuntimeError before, so keep it
@@ -55,6 +74,19 @@ class _IdTokenTimeError(IdTokenError):  # This is not intended to be raised and 
     def __init__(self, reason, now, claims):
         super(_IdTokenTimeError, self).__init__(reason+ " " + self._SUGGESTION, now, claims)
     def log(self):
+        """Log a warning message related to the token based on JWT and OIDC
+        specifications.
+
+        This method logs a warning message instead of raising an error, as per
+        the following reasons: 1. If the issue is due to incorrect local machine
+        time, the tokens are still valid and functional. 2. If the issue is due
+        to incorrect IdP time, it is the IdP's responsibility, and the client
+        can't do much about it.
+
+        Args:
+            self: The instance of the class.
+        """
+
         # Influenced by JWT specs https://tools.ietf.org/html/rfc7519#section-4.1.5
         # and OIDC specs https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation
         # We used to raise this error, but now we just log it as warning, because:
@@ -76,12 +108,14 @@ class IdTokenNonceError(IdTokenError):
     pass
 
 def decode_id_token(id_token, client_id=None, issuer=None, nonce=None, now=None):
-    """Decodes and validates an id_token and returns its claims as a dictionary.
+    """    Decodes and validates an id_token and returns its claims as a
+    dictionary.
 
-    ID token claims would at least contain: "iss", "sub", "aud", "exp", "iat",
-    per `specs <https://openid.net/specs/openid-connect-core-1_0.html#IDToken>`_
-    and it may contain other optional content such as "preferred_username",
-    `maybe more <https://openid.net/specs/openid-connect-core-1_0.html#Claims>`_
+    ID token claims would at least contain: "iss", "sub", "aud", "exp",
+    "iat", per `specs <https://openid.net/specs/openid-connect-
+    core-1_0.html#IDToken>`_ and it may contain other optional content such
+    as "preferred_username", `maybe more <https://openid.net/specs/openid-
+    connect-core-1_0.html#Claims>`_
     """
     decoded = json.loads(decode_part(id_token.split('.')[1]))
     # Based on https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation
@@ -134,6 +168,18 @@ def decode_id_token(id_token, client_id=None, issuer=None, nonce=None, now=None)
 
 
 def _nonce_hash(nonce):
+    """Calculate the SHA-256 hash of the provided nonce.
+
+    This function takes a nonce as input, encodes it to ASCII, and then
+    calculates the SHA-256 hash of the encoded nonce.
+
+    Args:
+        nonce (str): The nonce value to be hashed.
+
+    Returns:
+        str: The SHA-256 hash of the provided nonce.
+    """
+
     # https://openid.net/specs/openid-connect-core-1_0.html#NonceNotes
     return hashlib.sha256(nonce.encode("ascii")).hexdigest()
 
@@ -158,14 +204,35 @@ class Client(oauth2.Client):
     """
 
     def decode_id_token(self, id_token, nonce=None):
-        """See :func:`~decode_id_token`."""
+        """        Decode the given ID token using the provided nonce for validation.
+
+        This method decodes the ID token using the specified nonce for
+        validation.
+
+        Args:
+            id_token (str): The ID token to be decoded.
+            nonce (str?): Nonce value used for validation. Defaults to None.
+
+        Returns:
+            dict: Decoded information from the ID token.
+        """
         return decode_id_token(
             id_token, nonce=nonce,
             client_id=self.client_id, issuer=self.configuration.get("issuer"))
 
     def _obtain_token(self, grant_type, *args, **kwargs):
-        """The result will also contain one more key "id_token_claims",
-        whose value will be a dictionary returned by :func:`~decode_id_token`.
+        """        Obtain the token for the specified grant type.
+
+        The result will also contain one more key "id_token_claims", whose value
+        will be a dictionary returned by :func:`~decode_id_token`.
+
+        Args:
+            grant_type (str): The type of grant for obtaining the token.
+            *args: Additional positional arguments.
+            **kwargs: Additional keyword arguments.
+
+        Returns:
+            dict: A dictionary containing the obtained token and id_token_claims.
         """
         ret = super(Client, self)._obtain_token(grant_type, *args, **kwargs)
         if "id_token" in ret:
@@ -173,30 +240,30 @@ class Client(oauth2.Client):
         return ret
 
     def build_auth_request_uri(self, response_type, nonce=None, **kwargs):
-        """Generate an authorization uri to be visited by resource owner.
+        """        Generate an authorization URI to be visited by the resource owner.
 
-        Return value and all other parameters are the same as
-        :func:`oauth2.Client.build_auth_request_uri`, plus new parameter(s):
+        This function generates an authorization URI to be visited by the
+        resource owner for initiating the authentication flow. It is recommended
+        to use initiate_auth_code_flow() instead of this method.
 
-        :param nonce:
-            A hard-to-guess string used to mitigate replay attacks. See also
-            `OIDC specs <https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest>`_.
+        Args:
+            response_type (str): The type of response expected from the authorization server.
+            nonce (str?): A hard-to-guess string used to mitigate replay attacks.
+                Refer to OIDC specs for more information.
+
+        Returns:
+            str: The generated authorization URI.
         """
         warnings.warn("Use initiate_auth_code_flow() instead", DeprecationWarning)
         return super(Client, self).build_auth_request_uri(
             response_type, nonce=nonce, **kwargs)
 
     def obtain_token_by_authorization_code(self, code, nonce=None, **kwargs):
-        """Get a token via authorization code. a.k.a. Authorization Code Grant.
+        """        Get a token via authorization code. a.k.a. Authorization Code Grant.
 
         Return value and all other parameters are the same as
-        :func:`oauth2.Client.obtain_token_by_authorization_code`,
-        plus new parameter(s):
-
-        :param nonce:
-            If you provided a nonce when calling :func:`build_auth_request_uri`,
-            same nonce should also be provided here, so that we'll validate it.
-            An exception will be raised if the nonce in id token mismatches.
+        :func:`oauth2.Client.obtain_token_by_authorization_code`, plus new
+        parameter(s):
         """
         warnings.warn(
             "Use obtain_token_by_auth_code_flow() instead", DeprecationWarning)
@@ -213,17 +280,9 @@ class Client(oauth2.Client):
             self,
             scope=None,
             **kwargs):
-        """Initiate an auth code flow.
+        """        Initiate an auth code flow.
 
         It provides nonce protection automatically.
-
-        :param list scope:
-            A list of strings, e.g. ["profile", "email", ...].
-            This method will automatically send ["openid"] to the wire,
-            although it won't modify your input list.
-
-        See :func:`oauth2.Client.initiate_auth_code_flow` in parent class
-        for descriptions on other parameters and return value.
         """
         if "id_token" in kwargs.get("response_type", ""):
             # Implicit grant would cause auth response coming back in #fragment,
@@ -247,14 +306,11 @@ class Client(oauth2.Client):
         return flow
 
     def obtain_token_by_auth_code_flow(self, auth_code_flow, auth_response, **kwargs):
-        """Validate the auth_response being redirected back, and then obtain tokens,
-        including ID token which can be used for user sign in.
-
-        Internally, it implements nonce to mitigate replay attack.
-        It also implements PKCE to mitigate the auth code interception attack.
-
-        See :func:`oauth2.Client.obtain_token_by_auth_code_flow` in parent class
-        for descriptions on other parameters and return value.
+        """        Validate the auth_response being redirected back, and then obtain
+        tokens,
+        including ID token which can be used for user sign in.  Internally, it
+        implements nonce to mitigate replay attack. It also implements PKCE to
+        mitigate the auth code interception attack.
         """
         result = super(Client, self).obtain_token_by_auth_code_flow(
             auth_code_flow, auth_response, **kwargs)
@@ -298,30 +354,23 @@ class Client(oauth2.Client):
             login_hint=None,
             acr_values=None,
             **kwargs):
-        """A native app can use this method to obtain token via a local browser.
+        """        A native app can use this method to obtain token via a local browser.
 
-        Internally, it implements nonce to mitigate replay attack.
-        It also implements PKCE to mitigate the auth code interception attack.
+        Internally, it implements nonce to mitigate replay attack. It also
+        implements PKCE to mitigate the auth code interception attack.
 
-        :param string display: Defined in
-            `OIDC <https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest>`_.
-        :param string prompt: Defined in
-            `OIDC <https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest>`_.
-            You can find the valid string values defined in :class:`oidc.Prompt`.
+        Args:
+            display (str): Defined in OIDC.
+            prompt (str or list): Defined in OIDC. Valid values defined in oidc.Prompt.
+            max_age (int): Defined in OIDC.
+            ui_locales (str): Defined in OIDC.
+            id_token_hint (str): Defined in OIDC.
+            login_hint (str): Defined in OIDC.
+            acr_values (str): Defined in OIDC.
 
-        :param int max_age: Defined in
-            `OIDC <https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest>`_.
-        :param string ui_locales: Defined in
-            `OIDC <https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest>`_.
-        :param string id_token_hint: Defined in
-            `OIDC <https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest>`_.
-        :param string login_hint: Defined in
-            `OIDC <https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest>`_.
-        :param string acr_values: Defined in
-            `OIDC <https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest>`_.
-
-        See :func:`oauth2.Client.obtain_token_by_browser` in parent class
-        for descriptions on other parameters and return value.
+        Returns:
+            The return value is described in the parent class method
+                oauth2.Client.obtain_token_by_browser.
         """
         filtered_params = {k:v for k, v in dict(
             prompt=" ".join(prompt) if isinstance(prompt, (list, tuple)) else prompt,
