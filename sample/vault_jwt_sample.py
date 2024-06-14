@@ -56,6 +56,21 @@ from cryptography.hazmat.primitives import hashes
 config = json.load(open(sys.argv[1]))
 
 def auth_vault_callback(server, resource, scope):
+    """Authenticate with Azure Vault and retrieve access token.
+
+    This function authenticates with Azure Vault using the provided client
+    ID, client secret, and tenant ID. It then retrieves the access token
+    from the credentials and returns the token type and access token.
+
+    Args:
+        server (str): The server to authenticate with.
+        resource (str): The resource to access.
+        scope (str): The scope of the authentication.
+
+    Returns:
+        tuple: A tuple containing the token type and access token.
+    """
+
     credentials = ServicePrincipalCredentials(
         client_id=config['vault_clientid'],
         secret=config['vault_clientsecret'],
@@ -67,6 +82,15 @@ def auth_vault_callback(server, resource, scope):
 
 
 def make_vault_jwt():
+    """Generate a JSON Web Token (JWT) for accessing Azure Key Vault.
+
+    This function constructs a JWT token with the necessary headers and body
+    to authenticate and access Azure Key Vault.
+
+    Returns:
+        bytes: The JWT token as bytes.
+    """
+
 
     header = {
               'alg': 'RS256',
@@ -120,6 +144,13 @@ global_app = msal.ConfidentialClientApplication(
 
 
 def acquire_and_use_token():
+    """Acquire a token and use it to make a call to a downstream service.
+
+    Since MSAL 1.23, acquire_token_for_client(...) will automatically look
+    up a token from cache, and fall back to acquire a fresh token when
+    needed.
+    """
+
     # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
     # a token from cache, and fall back to acquire a fresh token when needed.
     result = global_app.acquire_token_for_client(scopes=config["scope"])

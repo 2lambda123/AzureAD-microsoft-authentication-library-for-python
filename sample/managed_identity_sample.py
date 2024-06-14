@@ -46,6 +46,15 @@ resource = os.getenv("RESOURCE")
 
 
 def acquire_and_use_token():
+    """Acquire a token and use it to make a web API call.
+
+    This function acquires a token using
+    ManagedIdentityClient.acquire_token_for_client method and then uses the
+    token to make a web API call. If the token is successfully acquired, it
+    makes the API call using the token. If the token acquisition fails, it
+    prints the result.
+    """
+
     # ManagedIdentityClient.acquire_token_for_client(...) will automatically look up
     # a token from cache, and fall back to acquire a fresh token when needed.
     result = global_app.acquire_token_for_client(resource=resource)
